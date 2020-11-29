@@ -1,0 +1,43 @@
+<div style="border-bottom: 1px solid gray; height:70px;margin-right: 10%;">
+    <div style="float: left;"><h3>Gallery</h3></div>
+    <div (click)="openModal()"  style="float: right; margin-top: 15px;margin-right: 10%;">
+        <img  height="35px" width="35px" class="example-header-image"  src={{userdata.profilepicture}} />
+     <label style="margin-top: 0px;padding-top: 0px;"> {{userdata.name}}</label>
+       
+    </div>
+        </div>
+        <div style="padding-left: 23%; padding-top: 23%;">
+<label style="color: lightgray;font-size: 80px;font-weight: bold;">Coming Soon</label>
+
+        </div>
+        <div class="l_c_h">
+            <div id="c_h" class="c_h">
+                <div class="left_c">
+                    <div  class="left right_c left_icons">
+                           <a (click)="openchat()" id="mini" class="mini" style="font-size:23px;">+</a>
+                    </div>
+                    <div class="left center_icons"><!--center_icons-->
+                         Chat
+                    </div><!--end center_icons-->        	
+                </div>
+                <div id="right_c" class="right right_c" style="width:35px;">
+                    <a href="#" class="logout" title="End chat" name="" style="display:none;"><img src="chat/logout.png"></a>        	
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div  id="chat_container" class="chat_container" style="display: none;">
+               
+                    <div *ngFor="let singledata of profData" style="padding: 0px; margin:0px" >                      
+                        <mat-list >
+                            <mat-list-item >
+                                <span class="dot"></span>&nbsp;&nbsp;  <img height="25px" width="25px" class="example-header-image"  src={{singledata.profilepicture}} />
+                                &nbsp;&nbsp;{{singledata.name}} 
+                              </mat-list-item>
+                           
+                            </mat-list>
+                            </div>
+                        
+               
+            </div>
+        </div>
+        

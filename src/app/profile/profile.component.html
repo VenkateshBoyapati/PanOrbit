@@ -1,0 +1,117 @@
+<div style="border-bottom: 1px solid gray; height:70px; margin-right: 10%;">
+    <div style="float: left;"><h3>Profie</h3></div>
+    <div (click)="openModal()" style="float: right; margin-top: 15px; margin-right: 10%;">
+        <img  height="35px" width="35px" class="example-header-image"  src={{userdata.profilepicture}} />
+     <label style="margin-top: 0px;padding-top: 0px;"> {{userdata.name}}</label>
+       
+    </div>
+        </div>
+<div style=" float: left; width: 80%;">
+   
+
+    
+
+<div style=" float: left; width: 40%;">
+    <div *ngFor="let singledata of profData" style="padding-top :30px;">                      
+        <mat-list *ngIf="singledata.id == userId">
+            <mat-list-item >
+                <img height="175px" width="180px" class="example-header-image"  src={{singledata.profilepicture}} />
+              </mat-list-item>
+            <mat-list-item style="padding-top: 60px;">
+                <b>{{singledata.name}}</b>
+            </mat-list-item>
+            <mat-list-item >
+                Username :&nbsp; <b>{{singledata.username}}</b>
+            </mat-list-item>
+            <mat-list-item>
+                e-mail : &nbsp;<b>{{singledata.email}}</b>
+            </mat-list-item>
+            <mat-list-item>
+                Phone :&nbsp; <b>{{singledata.phone}}</b>
+            </mat-list-item>
+            <mat-list-item>
+                Website :&nbsp; <b>{{singledata.website}}</b>
+            </mat-list-item>
+            <mat-divider></mat-divider> 
+            <mat-list-item>
+                Company
+            </mat-list-item>
+            <mat-list-item>
+                
+                Name : &nbsp;<b>{{singledata.company.name}}</b>
+            </mat-list-item>
+            <mat-list-item>
+                catchphrase: &nbsp; &nbsp;<b>{{singledata.company.catchPhrase}}</b>
+            </mat-list-item>
+            <mat-list-item>
+                bs : &nbsp; <b>{{singledata.company.bs}}</b>
+            </mat-list-item>
+       
+        </mat-list>
+            </div>
+
+</div>
+
+<div style="float: right; width: 50%; padding-top:0px;border-left: 1px solid gray;">
+    <div *ngFor="let data of profData" >                      
+        <mat-list *ngIf="data.id == userId">               
+            <mat-list-item >
+                Address:                    
+            </mat-list-item>
+            <mat-list-item >
+                Street : &nbsp;<b>{{data.address.street}}</b>
+            </mat-list-item>
+            <mat-list-item >
+                Suite : &nbsp;<b>{{data.address.suite}}</b>
+            </mat-list-item>
+            <mat-list-item >
+                City :&nbsp; <b>{{data.address.city}}</b>
+            </mat-list-item>
+            <mat-list-item >
+                Zipcode :&nbsp; <b>{{data.address.zipcode}}</b>
+            </mat-list-item>
+            </mat-list>
+   </div>
+   <div class="col-md-12" style="padding-left: 10px;">
+    <div class="card" id="map" style="width:500px;height:300px;"></div>
+    <div *ngFor="let data of profData" style="float: right;" >                      
+        <mat-list *ngIf="data.id == userId">               
+            <mat-list-item >
+                Lat : <b>{{data.address.geo.lat}}</b> &nbsp;&nbsp; Lat : <b>{{data.address.geo.lng}}</b>             
+            </mat-list-item>
+            </mat-list>
+            </div>
+  </div>
+</div>
+</div>
+
+<div class="l_c_h">
+	<div id="c_h" class="c_h">
+    	<div class="left_c">
+            <div  class="left right_c left_icons">
+                   <a (click)="openchat()" id="mini" class="mini" style="font-size:23px;">+</a>
+            </div>
+            <div class="left center_icons"><!--center_icons-->
+                 Chat
+            </div><!--end center_icons-->        	
+        </div>
+        <div id="right_c" class="right right_c" style="width:35px;">
+        	<a href="#" class="logout" title="End chat" name="" style="display:none;"><img src="chat/logout.png"></a>        	
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div  id="chat_container" class="chat_container" style="display: none;">
+       
+            <div *ngFor="let singledata of profData" style="padding: 0px; margin:0px" >                      
+                <mat-list >
+                    <mat-list-item >
+                        <span class="dot"></span>&nbsp;&nbsp;  <img height="25px" width="25px" class="example-header-image"  src={{singledata.profilepicture}} />
+                        &nbsp;&nbsp;{{singledata.name}} 
+                      </mat-list-item>
+                   
+                    </mat-list>
+                    </div>
+    	    	
+       
+    </div>
+</div>

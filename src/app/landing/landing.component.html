@@ -1,0 +1,22 @@
+
+<div style="background-image:url(./assets/background.png) ; width: 100%;height: 100%;"  >
+    <div style="width:450px;height: 400px;padding-top:10%;padding-left: 30%;">
+       
+    <mat-card style="border-radius: 20px; border: 1px solid;">
+        
+   <h4 style="text-align: center;">Select an account</h4>
+        
+    <div style="height:450px; width:430px; overflow: auto;">
+    <div *ngFor="let singledata of data">
+    <mat-list>
+      <mat-list-item (click)="profile(singledata)"><img height="40px" width="40px" class="example-header-image"  src={{singledata.profilepicture}} /> &nbsp;&nbsp; {{singledata.name}}</mat-list-item>
+      <mat-divider></mat-divider>  </mat-list>
+  </div>
+    </div>
+  </mat-card>
+  </div>    
+  </div>
+  <router-outlet></router-outlet>
+  
+  
+  

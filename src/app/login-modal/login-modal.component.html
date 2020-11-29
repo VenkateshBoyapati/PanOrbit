@@ -1,0 +1,23 @@
+<div id="modal-content-wrapper">
+    <header id="modal-header">
+        <h1 id="modal-title"></h1>
+    </header>
+    <section id="modal-body">
+        <div style="padding-left: 50px; padding-top:0px;">
+        <img  height="100px" width="100px" class="example-header-image"  src={{userdata.profilepicture}} />
+        
+        </div>
+        <div style="margin-left: 20px; margin-top: 10px;;">
+        <label style="font-family: Verdana, Geneva, Tahoma, sans-serif"> {{userdata.name}}</label>
+       
+        </div>
+        <div style="margin-top: 10px; margin-left: 20px; border-bottom: 1px solid gray;">
+            <label style="font-family:Verdana, Geneva, Tahoma, sans-serif"> {{userdata.email}}</label>
+        </div>
+    </section>
+    <footer id="modal-footer">
+        <button mat-raised-button id="modal-action-button"  (click)="actionFunction()">Sign out</button>
+        
+    </footer>
+</div>
+
