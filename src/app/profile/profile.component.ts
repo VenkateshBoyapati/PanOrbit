@@ -45,23 +45,23 @@ userdata:any=[];
   openchat()
   {
     
-    if(document.getElementById("mini").innerText=="-")
+    if(document.getElementById("mini").className=="arrowdown")
     {
       document.getElementById("chat_container").style.display = "none";
-      document.getElementById("mini").innerText="+";
+      document.getElementById("mini").className="arrowup"
     }
     else{
       document.getElementById("chat_container").style.display = "block";
-    document.getElementById("mini").innerText="-";
+    document.getElementById("mini").className="arrowdown";
     }
   }
   openModal() {
     const dialogConfig = new MatDialogConfig();
    // dialogConfig.disableClose = true;
     dialogConfig.id = "LoginModalComponent";
-    dialogConfig.height = "300px";
+    dialogConfig.height = "340px";
     dialogConfig.width = "250px";
-    dialogConfig.position= { top: '50px', right: '100px' };
+    dialogConfig.position= { top: '60px', right: '200px' };
   
     const modalDialog = this.matDialog.open(LoginModalComponent, dialogConfig);
     

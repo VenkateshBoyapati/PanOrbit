@@ -28,3 +28,11 @@
 #modal-cancel-button {
     background-color: #4e4e4e;
 }
+.mat-list-pro .mat-list-item, .mat-list-pro .mat-list-option {
+    display: block;
+     height: 25px; 
+     font-size: 12px;
+    -webkit-tap-highlight-color: transparent;
+    width: 100%;
+    padding: 0;
+  }

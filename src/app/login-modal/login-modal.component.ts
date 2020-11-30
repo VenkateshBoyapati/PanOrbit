@@ -10,20 +10,26 @@ import { DataService } from '../data.service';
 })
 export class LoginModalComponent implements OnInit {
   userdata:any=[];
+  profData:any;
   constructor(public dialogRef: MatDialogRef<LoginModalComponent>, public dataservice:DataService,
     public router:Router) { 
     this.userdata=dataservice.userdata;
+    this.profData=dataservice.profile;
   }
 
 
   ngOnInit() {
+   
   }
   
   actionFunction() {  
     this.dialogRef.close();
     this.router.navigate(['landing']);
   }
-
+  profile(userval){    
+    this.dataservice.userId = userval.id;
+    this.dataservice.userdata=userval;
+   }
  
 
 }

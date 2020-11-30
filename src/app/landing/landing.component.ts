@@ -17,7 +17,7 @@ export class LandingComponent implements OnInit {
    ngOnInit() {
   }
 
-  profile(userval){  
+  profile(userval){      
    this.dataService.userId = userval.id;
    this.dataService.userdata=userval;
   this.router.navigate(['navigation/profile']);

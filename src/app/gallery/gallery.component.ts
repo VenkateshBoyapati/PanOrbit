@@ -21,14 +21,14 @@ export class GalleryComponent implements OnInit {
   openchat()
   {
     
-    if(document.getElementById("mini").innerText=="-")
+    if(document.getElementById("mini").className=="arrowdown")
     {
       document.getElementById("chat_container").style.display = "none";
-      document.getElementById("mini").innerText="+";
+      document.getElementById("mini").className="arrowup"
     }
     else{
       document.getElementById("chat_container").style.display = "block";
-    document.getElementById("mini").innerText="-";
+    document.getElementById("mini").className="arrowdown";
     }
   }
   openModal() {

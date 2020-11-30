@@ -6,6 +6,57 @@ import { Injectable } from '@angular/core';
 export class DataService {
  public userId:number=0;
 userdata:any=[];
+
+profile =[
+    {
+        "id": 9,
+        "name": "Glenna Reichert",
+        "username": "Delphine",
+        "email": "Chaim_McDermott@dana.io",
+        "profilepicture": "https://panorbit.in/wp-content/uploads/2019/hotlink-ok/1009.jpeg",
+        "address": {
+            "street": "Dayna Park",
+            "suite": "Suite 449",
+            "city": "Bartholomebury",
+            "zipcode": "76495-3109",
+            "geo": {
+                "lat": "24.6463",
+                "lng": "-168.8889"
+            }
+        },
+        "phone": "(775)976-6794 x4hotlink-ok06",
+        "website": "conrad.com",
+        "company": {
+            "name": "Yost and Sons",
+            "catchPhrase": "Switchable contextually-based project",
+            "bs": "aggregate real-time technologies"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Clementina DuBuque",
+        "username": "Moriah.Stanton",
+        "email": "Rey.Padberg@karina.biz",
+        "profilepicture": "https://panorbit.in/wp-content/uploads/2019/hotlink-ok/1010.jpeg",
+        "address": {
+            "street": "Kattie Turnpike",
+            "suite": "Suite 198",
+            "city": "Lebsackbury",
+            "zipcode": "31428-2261",
+            "geo": {
+                "lat": "-38.2386",
+                "lng": "57.2232"
+            }
+        },
+        "phone": "024-648-3804",
+        "website": "ambrose.net",
+        "company": {
+            "name": "Hoeger LLC",
+            "catchPhrase": "Centralized empowering task-force",
+            "bs": "target end-to-end models"
+        }
+    }
+]
   data =[
     {
         "id": 1,

@@ -1,9 +1,12 @@
 <div style="border-bottom: 1px solid gray; height:70px; margin-right: 10%;">
     <div style="float: left;"><h3>Profie</h3></div>
-    <div (click)="openModal()" style="float: right; margin-top: 15px; margin-right: 10%;">
-        <img  height="35px" width="35px" class="example-header-image"  src={{userdata.profilepicture}} />
-     <label style="margin-top: 0px;padding-top: 0px;"> {{userdata.name}}</label>
-       
+    <div (click)="openModal()" style="float: right; margin-top: 15px; margin-right: 10%; align-items: center;">
+        <mat-list>
+            <mat-list-item>
+                <img height="40px" width="40px" class="example-header-image"  src={{userdata.profilepicture}} /> &nbsp;&nbsp; {{userdata.name}}</mat-list-item>
+             </mat-list>
+        
+     
     </div>
         </div>
 <div style=" float: left; width: 80%;">
@@ -11,10 +14,10 @@
 
     
 
-<div style=" float: left; width: 40%;">
-    <div *ngFor="let singledata of profData" style="padding-top :30px;">                      
-        <mat-list *ngIf="singledata.id == userId">
-            <mat-list-item >
+<div style=" float: left; width: 40%;padding-top: 60px;">
+    <div *ngFor="let singledata of profData" >                      
+        <mat-list *ngIf="singledata.id == userId" class="mat-list-pro">
+            <mat-list-item  style="margin-top: 30px;">
                 <img height="175px" width="180px" class="example-header-image"  src={{singledata.profilepicture}} />
               </mat-list-item>
             <mat-list-item style="padding-top: 60px;">
@@ -54,7 +57,7 @@
 
 <div style="float: right; width: 50%; padding-top:0px;border-left: 1px solid gray;">
     <div *ngFor="let data of profData" >                      
-        <mat-list *ngIf="data.id == userId">               
+        <mat-list *ngIf="data.id == userId" class="mat-list-pro">               
             <mat-list-item >
                 Address:                    
             </mat-list-item>
@@ -85,18 +88,19 @@
 </div>
 </div>
 
-<div class="l_c_h">
+<div class="l_c_h" style="margin-right:8%;">
 	<div id="c_h" class="c_h">
     	<div class="left_c">
             <div  class="left right_c left_icons">
-                   <a (click)="openchat()" id="mini" class="mini" style="font-size:23px;">+</a>
+                <mat-icon style="padding-top: 10px;">mode_comment_outlined</mat-icon>
+                   
             </div>
             <div class="left center_icons"><!--center_icons-->
-                 Chat
+                 Chats
             </div><!--end center_icons-->        	
         </div>
-        <div id="right_c" class="right right_c" style="width:35px;">
-        	<a href="#" class="logout" title="End chat" name="" style="display:none;"><img src="chat/logout.png"></a>        	
+        <div id="right_c" class="right right_c" style="width:35px; padding-top: 10px;padding-right: 20px;">
+        	<a (click)="openchat()" id="mini" class="arrowup" style="font-size:23px;"></a>
         </div>
         <div class="clear"></div>
     </div>
